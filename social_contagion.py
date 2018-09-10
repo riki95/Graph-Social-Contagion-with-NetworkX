@@ -48,22 +48,16 @@ def main():
     g = g.to_undirected()
     layout = nx.spring_layout(g)
     nx.set_node_attributes(g, False, 'contagion')  # Setta a tutti i parametri contagion il valore false
-    # print(nx.get_node_attributes(g, "contagion"))
     draw_graph(g, 0, layout)
 
     initialize_graph(g, 0.1)
     draw_graph(g, 1, layout)
 
     days = 5
-    rr = 1
-    bb = len(g.nodes) - 1
     for day in range(days):
         print('Day: ', day, file=file)
         for n in g.nodes():
-            print('\tnode=', n, file=file)
             nn_number = len(list(set(g.edges(n))))
-            print('\t\tVicini lista:', list(set(g.edges(n))), file=file)
-            print('\t\tVicini: ', nn_number, file=file)
             if nn_number == 0:
                 continue
 
@@ -71,18 +65,11 @@ def main():
             for frm, to in list(set(g.edges(n))):
                 if not g.node[to]['contagion']:
                     blues += 1
-            print('\t\tblues=', blues, file=file)
             p = blues / nn_number
-            print('\t\tp=', p, file=file)
             not_contagion_percentage = p * nn_number * a
-            print('\t\tcontagion=', not_contagion_percentage, file=file)
             contagion_percentage = (1 - p) * nn_number * b
-            print('\t\tcontagion=', contagion_percentage, file=file)
             if contagion_percentage > not_contagion_percentage:
                 g.node[n]['contagion'] = True
-                rr += 1
-                bb -= 1
-            print('\tblue ', bb, 'red ', rr, file=file)
         draw_graph(g, day + 2, layout)
 
     plt.close()
