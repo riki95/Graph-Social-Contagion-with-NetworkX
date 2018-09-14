@@ -47,7 +47,7 @@ Where red nodes represent the infected ones. At the end, if the contagion parame
 
 ![Graph Image 2](https://i.imgur.com/xf5u7Hv.png)
 
-Every node is red, this means that you infected the whole graph. Sometimes the graph is so big that you cannot visualize all the nodes and maybe there are blue nodes hidden beside the reds. So you can check on terminal because at the end the list of remaining nodes to infect will be printed and if it is empty, it means that you did a good work.
+Every node is red, this means that you infected the whole graph. Sometimes the graph is so big that you cannot visualize all the nodes and maybe there are blue nodes hidden behind the reds. So you can check on terminal because at the end the list of remaining nodes to infect will be printed and if it is empty, it means that you did a good work.
 
 ## Authors
 
