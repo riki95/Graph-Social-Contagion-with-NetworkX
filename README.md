@@ -39,11 +39,15 @@ Thanks to this script you will be able to reproduce a Social Contagion on your G
 
 ![Graph Image 1](https://i.imgur.com/72EXAqG.png)
 
-You can modify colors, nodes, scales and so on. You can also draw histograms:
+You can modify colors, nodes, scales and so on. The png images will be numbered from 1 (the first) to the last one and they represent the days of the contagion. For eample the second one look like this:
 
-![Diameter Historgram](https://i.imgur.com/aplPStE.png)
+![Graph Image 2](https://i.imgur.com/iEAn7r7.jpg)
 
-This has been done with Matplotlib and it is very useful if you need to plot degrees or something like that.
+Where red nodes represent the infected ones. At the end, if the contagion parameters are good enough, you will get this:
+
+![Graph Image 2](https://i.imgur.com/xf5u7Hv.png)
+
+Every node is red, this means that you infected the whole graph. Sometimes the graph is so big that you cannot visualize all the nodes and maybe there are blue nodes hidden beside the reds. So you can check on terminal because at the end the list of remaining nodes to infect will be printed and if it is empty, it means that you did a good work.
 
 ## Authors
 
